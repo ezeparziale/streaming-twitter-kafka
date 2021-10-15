@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter live</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+      
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+  </head>
+  <body>
+    <h2 align="center">Twitter World Map&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="boton_dark" class="btn" type="button" onclick="myFunction()"><span id="span_dark">🌙</span></button>
+    </h2>
+
+    <div id="mapid" style="width:1000px; height:620px; margin:0 auto;" ></div>
+    <script src="../static/leaf.js"></script>
+
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+
+        var element_span = document.getElementById("span_dark");
+        if (element_span.innerHTML === "🌙") {
+          element_span.innerHTML = "☀️";
+        } else {
+          element_span.innerHTML = "🌙";
+        }
+        
+        var element_btn = document.getElementById("boton_dark");
+        element_btn.classList.toggle("btn-dark");
+      } 
+    </script>
+  </body>
+</html>
