@@ -22,8 +22,8 @@ if __name__ == '__main__':
   stream = Stream(auth, listener )
 
   # Setting para la busqueda
-  tracks = config.TRACKS  # palabras, usuarios, hastags a buscar
-  location = config.LOCATION  # Ubicacion area de tuits
+  tracks = config.TRACKS        # Palabras, usuarios, hastags a buscar
+  location = config.LOCATION    # Ubicacion area de tuits
   languages = config.LANGUAGES  # Idioma de los tuis
 
   stream.filter(track=tracks, locations=location, languages=languages)
