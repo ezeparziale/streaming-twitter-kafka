@@ -113,14 +113,14 @@ Este archivo va a conectarse a twitter y leer los tuits con los parametros estab
 
 ## Extras
 
-Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
+* Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
 ```url
 https://boundingbox.klokantech.com
 ```
 
 ![image](./img/image4.PNG)  
 
-Ejemplos posibles de mapas con **Leafletsjs**:
+* Ejemplos posibles de mapas con **Leafletsjs**:
 ```
 https://leafletjs.com/examples.html
 ```
