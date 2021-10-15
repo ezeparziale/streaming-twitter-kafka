@@ -2,7 +2,7 @@
 
 Demo de streaming de tuits usando la api de Twitter y enviando los tuis a kafka para su posterior lectura y visualización en mapa.
 
-![image](./img/image1.png)  
+![image](./img/image1.PNG)  
 
 
 &nbsp;
@@ -85,7 +85,7 @@ LANGUAGES = ['en','es']
 ```
 
 * Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
-![image](./img/image5.png)  
+![image](./img/image5.PNG)  
 
 &nbsp;
 
@@ -105,8 +105,8 @@ Este archivo va a conectarse a twitter y leer los tuits con los parametros estab
 
 7.  Entrar con el explorador a *http://localhost:5001*
 
-![image](./img/image6.png)  
-![image](./img/image7.png)  
+![image](./img/image6.PNG)  
+![image](./img/image7.PNG)  
 
 
 &nbsp;
@@ -118,7 +118,7 @@ Para obtener las areas de las ubicaciones para poner en el parametro **locations
 https://boundingbox.klokantech.com
 ```
 
-![image](./img/image4.png)  
+![image](./img/image4.PNG)  
 
 Ejemplos posibles de mapas con **Leafletsjs**:
 ```
