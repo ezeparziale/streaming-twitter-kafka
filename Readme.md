@@ -84,12 +84,14 @@ LOCATION = [-126.2,-56.0,22.3,58.9]
 LANGUAGES = ['en','es']
 ```
 
-* Configurar el tocken de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
+* Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
 ![image](./img/image5.png)  
 
 &nbsp;
 
 4. Ejecutar el archivo **new_topic.py** para crear el topico en kafka.
+
+&nbsp;
    
 5. Ejecutar el archivo **producer.py** para correr el producer de kafka.
    
@@ -103,11 +105,15 @@ Este archivo va a conectarse a twitter y leer los tuits con los parametros estab
 
 7.  Entrar con el explorador a *http://localhost:5001*
 
+![image](./img/image6.png)  
+![image](./img/image7.png)  
+
+
 &nbsp;
 
 ## Extras
 
-Para obtner las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
+Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
 ```url
 https://boundingbox.klokantech.com
 ```
