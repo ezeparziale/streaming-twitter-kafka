@@ -1,14 +1,12 @@
-from tweepy import StreamListener
-from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaProducer
 import config
 
 producer = KafkaProducer(bootstrap_servers=config.SERVER_KAFKA)
 
-class StdOutListener(StreamListener):
+class StdOutListener(Stream):
   def on_data(self, data):
-    producer.send(config.TOPIC_NAME, str.encode(data))
+    producer.send(config.TOPIC_NAME, data)
     print(data)
     return True
 
@@ -16,10 +14,7 @@ class StdOutListener(StreamListener):
     print(status)
   
 if __name__ == '__main__':
-  auth = OAuthHandler(config.API_KEY, config.API_SECRET_KEY)
-  auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET)
-  listener  = StdOutListener()
-  stream = Stream(auth, listener )
+  stream = StdOutListener(config.API_KEY, config.API_SECRET_KEY, config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET )
 
   # Setting para la busqueda
   tracks = config.TRACKS        # Palabras, usuarios, hastags a buscar
