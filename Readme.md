@@ -1,6 +1,6 @@
 # Streaming twitter con kafka
 
-Demo de streaming de tuits usando la api de Twitter y enviando los tuis a kafka para su posterior lectura y visualización en mapa.
+Demo de streaming de tweets usando la api de Twitter y enviando los tweets a kafka para su posterior lectura y visualización en mapa.
 
 ![image](./img/image1.PNG)
 
@@ -16,37 +16,37 @@ Features:
 
 - Docker
 
-```http
-https://www.docker.com/get-started
-```
+    ```http
+    https://www.docker.com/get-started
+    ```
 
 - Acceso a la API de Twitter
 
-Para generar la app developer y obtener las key
+    Para generar la app developer y obtener las key
 
-```http
-https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
-```
+    ```http
+    https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
+    ```
 
 - Acceso a la API de MapBox
 
-Para obtener el token
+    Para obtener el token
 
-```http
-https://www.mapbox.com
-```
+    ```http
+    https://www.mapbox.com
+    ```
 
 - Git
 
-```http
-https://git-scm.com
-```
+    ```http
+    https://git-scm.com
+    ```
 
 - Instalar los requerimientos de python:
   
-```console
-pip install -r requirements.txt
-```
+    ```console
+    pip install -r requirements.txt
+    ```
 
 &nbsp;
 
