@@ -84,7 +84,7 @@ pip install -r requirements.txt
    - Configurar las variables de busqueda:
   
         ```python
-        TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
+        TRACKS = ['#argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
         LOCATION = [-126.2,-56.0,22.3,58.9]
         LANGUAGES = ['en','es']
         ```
