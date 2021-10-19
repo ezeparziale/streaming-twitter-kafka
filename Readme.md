@@ -108,6 +108,12 @@ pip install -r requirements.txt
 
     &nbsp;
 
+8. Entrar con el explorador a *http://127.0.0.1:5001/topic/twitter* para ver los distintos tweets en formato plano.
+
+9. Entrar con el explorador a *http://127.0.0.1:5001/map* para ver el heat map
+
+    ![image](./img/image8.PNG)  
+
 ## Extras
 
 * Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
