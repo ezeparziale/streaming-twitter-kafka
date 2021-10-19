@@ -68,26 +68,26 @@ pip install -r requirements.txt
 
    - Configurar el archivo *config.py* seteando la variable **TOPIC_NAME** con el valor del topico que queremos crear
 
-   ```python
-   TOPIC_NAME = 'twitter'
-   ```
+        ```python
+        TOPIC_NAME = 'twitter'
+        ```
 
    - Configurar los token de la api de twitter
   
-   ```python
-   API_KEY = 'INGRESAR_LA_API_KEY'
-   API_SECRET_KEY = 'INGRESAR_LA_API_SECRET_KEY'
-   ACCESS_TOKEN = 'INGRESAR_EL_ACCESS_TOKEN'
-   ACCESS_TOKEN_SECRET = 'INGRESAR_EL_ACCESS_TOKEN_SECRET'
-   ```
+        ```python
+        API_KEY = 'INGRESAR_LA_API_KEY'
+        API_SECRET_KEY = 'INGRESAR_LA_API_SECRET_KEY'
+        ACCESS_TOKEN = 'INGRESAR_EL_ACCESS_TOKEN'
+        ACCESS_TOKEN_SECRET = 'INGRESAR_EL_ACCESS_TOKEN_SECRET'
+        ```
 
    - Configurar las variables de busqueda:
   
-   ```python
-   TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
-   LOCATION = [-126.2,-56.0,22.3,58.9]
-   LANGUAGES = ['en','es']
-   ```
+        ```python
+        TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
+        LOCATION = [-126.2,-56.0,22.3,58.9]
+        LANGUAGES = ['en','es']
+        ```
 
    - Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
    ![image](./img/image5.PNG)  
