@@ -2,7 +2,13 @@
 
 Demo de streaming de tuits usando la api de Twitter y enviando los tuis a kafka para su posterior lectura y visualización en mapa.
 
-![image](./img/image1.PNG)  
+![image](./img/image1.PNG)
+
+Features:
+
+- [x] Localización de tweets en mapa
+- [x] Lectura de tweets
+- [x] Heatmap de tweets
 
 &nbsp;
 
