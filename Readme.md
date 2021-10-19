@@ -14,13 +14,13 @@ Features:
 
 ## Requerimientos
 
-* Docker
+- Docker
 
 ```http
 https://www.docker.com/get-started
 ```
 
-* Acceso a la API de Twitter
+- Acceso a la API de Twitter
 
 Para generar la app developer y obtener las key
 
@@ -28,7 +28,7 @@ Para generar la app developer y obtener las key
 https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
 ```
 
-* Acceso a la API de MapBox
+- Acceso a la API de MapBox
 
 Para obtener el token
 
@@ -36,13 +36,13 @@ Para obtener el token
 https://www.mapbox.com
 ```
 
-* Git
+- Git
 
 ```http
 https://git-scm.com
 ```
 
-* Instalar los requerimientos de python:
+- Instalar los requerimientos de python:
   
 ```console
 pip install -r requirements.txt
@@ -52,15 +52,11 @@ pip install -r requirements.txt
 
 ## Ejecución
 
-&nbsp;
-
 1. Clonar el repositorio
 
     ```console
     git clone https://github.com/ezeparziale/streaming-twitter-kafka.git .
     ```
-
-    &nbsp;
 
 2. Ejecutar el archivo docker-compose.yaml
 
@@ -68,17 +64,15 @@ pip install -r requirements.txt
     docker-compose -f "docker-compose.yaml" up -d
     ```
 
-    &nbsp;
-
 3. Configurar los parametros
 
-   * Configurar el archivo *config.py* seteando la variable **TOPIC_NAME** con el valor del topico que queremos crear
+   - Configurar el archivo *config.py* seteando la variable **TOPIC_NAME** con el valor del topico que queremos crear
 
    ```python
    TOPIC_NAME = 'twitter'
    ```
 
-   * Configurar los token de la api de twitter
+   - Configurar los token de la api de twitter
   
    ```python
    API_KEY = 'INGRESAR_LA_API_KEY'
@@ -87,7 +81,7 @@ pip install -r requirements.txt
    ACCESS_TOKEN_SECRET = 'INGRESAR_EL_ACCESS_TOKEN_SECRET'
    ```
 
-   * Configurar las variables de busqueda:
+   - Configurar las variables de busqueda:
   
    ```python
    TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
@@ -95,7 +89,7 @@ pip install -r requirements.txt
    LANGUAGES = ['en','es']
    ```
 
-   * Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
+   - Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
    ![image](./img/image5.PNG)  
 
    &nbsp;
@@ -122,7 +116,7 @@ pip install -r requirements.txt
 
 ## Extras
 
-* Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
+- Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
   
 ```http
 https://boundingbox.klokantech.com
@@ -130,7 +124,7 @@ https://boundingbox.klokantech.com
 
 ![image](./img/image4.PNG)  
 
-* Ejemplos posibles de mapas con **Leafletsjs**:
+- Ejemplos posibles de mapas con **Leafletsjs**:
   
 ```http
 https://leafletjs.com/examples.html
