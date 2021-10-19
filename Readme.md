@@ -90,9 +90,7 @@ pip install -r requirements.txt
         ```
 
    - Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
-   ![image](./img/image5.PNG)  
-
-   &nbsp;
+        ![image](./img/image5.PNG)  
 
 4. Ejecutar el archivo **new_topic.py** para crear el topico en kafka.
     &nbsp;
@@ -118,14 +116,14 @@ pip install -r requirements.txt
 
 - Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
   
-```http
-https://boundingbox.klokantech.com
-```
+    ```http
+    https://boundingbox.klokantech.com
+    ```
 
-![image](./img/image4.PNG)  
+    ![image](./img/image4.PNG)  
 
 - Ejemplos posibles de mapas con **Leafletsjs**:
   
-```http
-https://leafletjs.com/examples.html
-```
+    ```http
+    https://leafletjs.com/examples.html
+    ```
