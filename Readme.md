@@ -1,4 +1,4 @@
-# Streaming twitter con kafka
+# 🐦 Streaming twitter con kafka
 
 Demo de streaming de tweets usando la api de Twitter y enviando los tweets a kafka para su posterior lectura y visualización en mapa.
 
@@ -12,7 +12,7 @@ Features:
 
 &nbsp;
 
-## Requerimientos
+## 📦 Requerimientos
 
 - Docker
 
@@ -50,7 +50,7 @@ Features:
 
 &nbsp;
 
-## Ejecución
+## 🏃‍♂️ Ejecución
 
 1. Clonar el repositorio
 
@@ -112,7 +112,7 @@ Features:
 
     ![image](./img/image8.PNG)  
 
-## Extras
+## 🔔 Extras
 
 - Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
   
