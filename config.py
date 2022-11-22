@@ -1,14 +1,32 @@
-# API KEYS DE TWIITER
-API_KEY = 'INGRESAR_LA_API_KEY'
-API_SECRET_KEY = 'INGRESAR_LA_API_SECRET_KEY'
-ACCESS_TOKEN = 'INGRESAR_EL_ACCESS_TOKEN'
-ACCESS_TOKEN_SECRET = 'INGRESAR_EL_ACCESS_TOKEN_SECRET'
+from pydantic import BaseSettings
 
-# KAFKA
-SERVER_KAFKA = 'localhost:9092'
-TOPIC_NAME = 'twitter' # NOMBRE DEL TOPIC DE KAFKA
 
-# CONFIGURACION PARA BUSQUEDA DE TUITS
-TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
-LOCATION = [-126.2,-56.0,22.3,58.9]
-LANGUAGES = ['en','es']
+class Settings(BaseSettings):
+
+    # API KEYS DE TWIITER
+    TWITTER_API_KEY: str
+    TWITTER_API_SECRET_KEY: str
+    TWITTER_ACCESS_TOKEN: str
+    TWITTER_ACCESS_TOKEN_SECRET: str
+
+    # KAFKA
+    SERVER_KAFKA: str = "localhost:9092"
+    TOPIC_NAME: str = "twitter"  # NOMBRE DEL TOPIC DE KAFKA
+
+    # CONFIGURACION PARA BUSQUEDA DE TUITS
+    TRACKS: list = [
+        "#argentina",
+        "argentina",
+        "seleccion",
+        "messi",
+        "escaloneta",
+        "afa",
+    ]
+    LOCATION: list = [-126.2, -56.0, 22.3, 58.9]
+    LANGUAGES: list = ["en", "es"]
+
+    class Config:
+        env_file = [".env"]
+
+
+settings = Settings()
