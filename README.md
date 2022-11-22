@@ -1,129 +1,76 @@
-# 🐦 Streaming twitter con kafka
+# 🐦 Streaming tweets with kafka
 
-Demo de streaming de tweets usando la api de Twitter y enviando los tweets a kafka para su posterior lectura y visualización en mapa.
+Demo of streaming tweets from twitter.
 
 ![image](./img/image1.PNG)
 
 Features:
 
-- [x] Localización de tweets en mapa
-- [x] Lectura de tweets
-- [x] Heatmap de tweets
+- [x] Geolocalization
+- [x] Read tweets
+- [x] Heatmap
 
-&nbsp;
+## :floppy_disk: Installation
 
-## 📦 Requerimientos
+```bash
+python -m venv env
+```
 
-- Docker
+```bash
+. env/scripts/activate
+```
 
-    ```http
-    https://www.docker.com/get-started
-    ```
+```bash
+python -m pip install --upgrade pip
+```
 
-- Acceso a la API de Twitter
+```bash
+pip install -r requirements.txt
+```
 
-    Para generar la app developer y obtener las key
+## :wrench: Config
 
-    ```http
-    https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
-    ```
+Create `.env` file. Check the example `.env.example`
 
-- Acceso a la API de MapBox
+Create your twitter app to get credentils:
 
-    Para obtener el token
+```http
+https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api
+```
 
-    ```http
-    https://www.mapbox.com
-    ```
+## 🏃‍♂️ Run
 
-- Git
+1. Run docker compose to initialize the kafka server.
 
-    ```http
-    https://git-scm.com
-    ```
+```console
+docker-compose -f "docker-compose.yaml" up -d
+```
 
-- Instalar los requerimientos de python:
-  
-    ```console
-    pip install -r requirements.txt
-    ```
+2. Config your search paramaters in `config.py`:
 
-&nbsp;
+```python
+TRACKS = ['#argentina','argentina','boca','river','ronaldo','messi','psg','barcelona','manchester']
+LOCATION = [-126.2,-56.0,22.3,58.9]
+LANGUAGES = ['en','es']
+```
 
-## 🏃‍♂️ Ejecución
+Check BoundingBox for setting `LOCATION` var
 
-1. Clonar el repositorio
+```http
+https://boundingbox.klokantech.com
+```
 
-    ```console
-    git clone https://github.com/ezeparziale/streaming-twitter-kafka.git .
-    ```
+![image](./img/image4.PNG)  
 
-2. Ejecutar el archivo docker-compose.yaml
-
-    ```dockerfile
-    docker-compose -f "docker-compose.yaml" up -d
-    ```
-
-3. Configurar los parametros
-
-   - Configurar el archivo *config.py* seteando la variable **TOPIC_NAME** con el valor del topico que queremos crear
-
-        ```python
-        TOPIC_NAME = 'twitter'
-        ```
-
-   - Configurar los token de la api de twitter
-  
-        ```python
-        API_KEY = 'INGRESAR_LA_API_KEY'
-        API_SECRET_KEY = 'INGRESAR_LA_API_SECRET_KEY'
-        ACCESS_TOKEN = 'INGRESAR_EL_ACCESS_TOKEN'
-        ACCESS_TOKEN_SECRET = 'INGRESAR_EL_ACCESS_TOKEN_SECRET'
-        ```
-
-   - Configurar las variables de busqueda:
-  
-        ```python
-        TRACKS = ['#argentina','boca','river','ronaldo','messi','psg','barcelona','manchesterd']
-        LOCATION = [-126.2,-56.0,22.3,58.9]
-        LANGUAGES = ['en','es']
-        ```
-
-   - Configurar el token de MapBox en el archivo *./static/leaf.js* en la variable **accessToken**
-        ![image](./img/image5.PNG)  
-
-4. Ejecutar el archivo **new_topic.py** para crear el topico en kafka.
-    &nbsp;
-5. Ejecutar el archivo **producer.py** para correr el producer de kafka.  
-    Este archivo va a conectarse a twitter y leer los tuits con los parametros establecidos y los va a disponibilizar en el topico.
-    &nbsp;
-6. Ejecutar el archivo **frontend.py** para levantar la web del mapa y asi poder visualizar el mapa.
-    &nbsp;
-7. Entrar con el explorador a *http://localhost:5001*
+3. Run **new_topic.py** for create the kafka topic.
+4. Run **producer.py** for read tweets and publish in kafka topic.
+5. Run **frontend.py** for webserver flask
+4. Go to *http://localhost:5001*
 
     ![image](./img/image6.PNG)  
     ![image](./img/image7.PNG)  
 
-    &nbsp;
-
-8. Entrar con el explorador a *http://127.0.0.1:5001/topic/twitter* para ver los distintos tweets en formato plano.
-
-9. Entrar con el explorador a *http://127.0.0.1:5001/map* para ver el heat map
+5. Go to *http://127.0.0.1:5001/topic/twitter* for see tweets in raw format.
+6. Go to *http://127.0.0.1:5001/map* for see the heatmap
 
     ![image](./img/image8.PNG)  
-
-## 🔔 Extras
-
-- Para obtener las areas de las ubicaciones para poner en el parametro **locations** del *producer.py*
-  
-    ```http
-    https://boundingbox.klokantech.com
-    ```
-
-    ![image](./img/image4.PNG)  
-
-- Ejemplos posibles de mapas con **Leafletsjs**:
-  
-    ```http
-    https://leafletjs.com/examples.html
-    ```
