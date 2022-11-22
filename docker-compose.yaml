@@ -1,8 +1,8 @@
-version: '3.8'
+version: "3.9"
 services:
 
   zoo-1:
-    image: confluentinc/cp-zookeeper:6.2.1
+    image: confluentinc/cp-zookeeper:7.3.0
     container_name: zoo-1
     hostname: zoo-1
     ports:
@@ -14,10 +14,10 @@ services:
     #   - ./volume/zookeeper/data:/data
     #   - ./volume/zookeeper/datalog:/datalog
     networks:
-     - kakfa-net
+      - kafka-net
 
   kafka-1:
-    image: confluentinc/cp-kafka:6.2.1
+    image: confluentinc/cp-kafka:7.3.0
     container_name: kafka-1
     hostname: kafka-1
     ports:
@@ -34,7 +34,7 @@ services:
     depends_on:
       - zoo-1
     networks:
-     - kakfa-net
+      - kafka-net
 
 networks:
-  kakfa-net:
+  kafka-net:
