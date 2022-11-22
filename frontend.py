@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask, Response, jsonify, render_template, request
+from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
 
 app = Flask(__name__)
