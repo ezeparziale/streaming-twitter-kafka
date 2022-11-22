@@ -1,2 +1,4 @@
 env/
 volume/
+*.env
+**/*.pyc
