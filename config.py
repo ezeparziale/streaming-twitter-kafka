@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
 
-    # API KEYS DE TWIITER
+    # API KEYS DE TWITTER
     TWITTER_API_KEY: str
     TWITTER_API_SECRET_KEY: str
     TWITTER_ACCESS_TOKEN: str
