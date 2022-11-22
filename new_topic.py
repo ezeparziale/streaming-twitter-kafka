@@ -5,9 +5,7 @@ from config import settings
 n_repicas = 1
 n_partitions = 3
 
-admin_client = AdminClient({
-    "bootstrap.servers": settings.SERVER_KAFKA
-})
+admin_client = AdminClient({"bootstrap.servers": settings.SERVER_KAFKA})
 
 topic_list = []
 topic_list.append(NewTopic(settings.TOPIC_NAME, n_partitions, n_repicas))
