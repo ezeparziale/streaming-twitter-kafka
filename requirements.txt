@@ -2,4 +2,4 @@ kafka-python==2.0.2
 tweepy==4.12.1
 confluent-kafka==1.9.2
 Flask==2.2.2
-Flask==2.0.2
+pydantic[dotenv]==1.10.2
